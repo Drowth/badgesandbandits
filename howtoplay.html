@@ -31,13 +31,13 @@
       font-family: sans-serif;
       font-size: 0.95rem;
       margin: 10px auto;
-      max-width: 800px;
+      max-width: 900px;
       padding: 0 20px;
     }
 
     .section {
       margin: 30px auto;
-      max-width: 850px;
+      max-width: 950px;
       text-align: left;
       padding: 0 20px;
     }
@@ -55,7 +55,7 @@
       font-size: 0.95rem;
       line-height: 1.6;
       padding-left: 1.2em;
-      max-width: 800px;
+      max-width: 900px;
       margin: 10px auto;
     }
 
@@ -87,63 +87,112 @@
 <body>
   <img src="images/logo.png" alt="Badges & Bandits Logo" class="logo" />
   <h1>How to Play</h1>
-  <p>A quick-start guide to understanding the dusty showdowns and sneaky bluffs of Badges & Bandits.</p>
-
-  <div class="section">
-    <h2>Objective</h2>
-    <p>You're either a law-aligned Badge or a devious Bandit. Badges want to protect the town and hang the Ringleader. Bandits want to pull off 3 Heists — or take out the Sheriff.</p>
+  <p>Welcome to <strong>Badges & Bandits</strong> — a gritty, social deduction card game about bluffing, bullets, and betrayal.</p>
+  <div class="back-button">
+    <button onclick="window.location.href='index.html'">⬅ Back to Home</button>
   </div>
 
   <div class="section">
-    <h2>Game Setup</h2>
+    <h2>Why I Made This Game</h2>
+    <p>I’ve always loved games like Coup, Bang!, and Secret Hitler — ones full of second guessing, accusations, and betrayal. I wanted to create something with that same energy, but set in the Wild West. A place where you don’t know who to trust, and every smile might hide a pistol.</p>
+    <p>This game is my first attempt at designing something from the ground up — and with the help of my playgroup, it’s already sparked showdowns, chaos, and plenty of “you what?!” moments. If you enjoy out-bluffing your mates, this one’s for you.</p>
+  </div>
+
+  <div class="section">
+    <h2>Quick Summary</h2>
+    <ul>
+      <li>You're either a Badge (Sheriff, Deputy, Marshal’s Courier) or a Bandit (or Ringleader)</li>
+      <li>Choose a location, play an action card, resolve chaos</li>
+      <li>After Rounds 3 & 5, players vote to hang someone</li>
+      <li>Bandits win by pulling off 3 Heists or killing the Sheriff</li>
+      <li>Badges win by hanging the Ringleader (after ≥1 Heist) or stopping all Heists</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Setup</h2>
     <ol>
-      <li>Deal each player a secret Role Card</li>
-      <li>Lay out all 5 Location Cards</li>
-      <li>Each player gets a hand of 6 Action Cards</li>
-      <li>Place Suspicion and Damage Tokens nearby</li>
-      <li>Shuffle Item Cards (Curses, Pistol, Armor, etc.)</li>
-      <li>Set the Round Tracker and Heist Pile in the center</li>
+      <li>Deal 1 Role Card to each player (face down)</li>
+      <li>Use either Standard Roles or the Ringleader Recruitment phase (see below)</li>
+      <li>Place 5 Location Cards in a central pool</li>
+      <li>Each player receives 6 Action Cards</li>
+      <li>Shuffle and place the Item Deck</li>
+      <li>Set Suspicion, Damage, Round Tracker, and Heist Token Pile on the table</li>
     </ol>
   </div>
 
   <div class="section">
-    <h2>Role Assignment</h2>
-    <p><strong>Option 1: Standard</strong> — Everyone gets a defined role (e.g., Sheriff, Bandit, etc.)</p>
-    <p><strong>Option 2: Ringleader Recruitment</strong> — All roles are blank. Ringleader secretly selects 1–2 allies by tapping hands during a blind phase.</p>
+    <h2>Role Options</h2>
+    <ul>
+      <li><strong>Ringleader:</strong> Head of the Bandits. Must be hanged to lose.</li>
+      <li><strong>Bandit:</strong> Standard outlaw. Can perform Heists and defend allies.</li>
+      <li><strong>Sheriff:</strong> Law’s leader. Must be protected.</li>
+      <li><strong>Deputy:</strong> Law-aligned, cannot Heist.</li>
+      <li><strong>Marshal's Courier:</strong> Once per game, may change locations after all actions are revealed.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Ringleader Recruitment Phase</h2>
+    <p>Only the Ringleader knows their role at first. All others have law aligned cards.</p>
+    <ol>
+      <li>All players close eyes with their role cards out in front of them</li>
+      <li>The Ringleader opens their eyes and silently replaces 1–2 role cards with Bandit roles</li>
+      <li>Everyone reopens their eyes and checks their (maybe new) role card, obviously everyone should be shocked and exclaim they have been changed, because thats just funny. (probably)</li>
+    </ol>
+    <p><em>“Everyone, close your eyes and hold out your hand. Ringleader, open your eyes… select your allies… now close them. Everyone may open their eyes.”</em></p>
   </div>
 
   <div class="section">
     <h2>Round Structure</h2>
     <ol>
-      <li><strong>Pick Locations:</strong> Players draft which spot to visit</li>
-      <li><strong>Play Actions:</strong> Heist, Buy, Shoot, Stakeout, Lay Low, Defend</li>
-      <li><strong>Resolve by Location:</strong> All cards are revealed and resolved one location at a time</li>
-      <li><strong>Apply Results:</strong> Suspicion, Damage, and Heist Tokens applied</li>
-      <li><strong>Gallows Vote:</strong> After Rounds 3 and 5, the most suspicious players face judgment</li>
+      <li><strong>1. Location Draft:</strong> Players pick a location (round-robin)</li>
+      <li><strong>2. Play Actions:</strong> Secretly play one card (Heist, Buy, Shoot, etc.)</li>
+      <li><strong>3. Reveal & Resolve:</strong> Location by location, cards are flipped and effects are resolved</li>
+      <li><strong>4. Apply Effects:</strong> Heists, Suspicion, Damage, Items</li>
+      <li><strong>5. Gallows Phase:</strong> After Rounds 3 & 5 — vote to hang someone</li>
     </ol>
   </div>
 
   <div class="section">
     <h2>Victory Conditions</h2>
     <ul>
-      <li><strong>Bandits Win:</strong> 3 Heists completed or Sheriff is eliminated</li>
-      <li><strong>Badges Win:</strong> Ringleader is hanged after ≥1 Heist, or no Heists occur by Round 5</li>
+      <li><strong>Bandits Win:</strong> 3 Heists succeed or the Sheriff dies</li>
+      <li><strong>Badges Win:</strong> Ringleader is hanged (after ≥1 Heist) or no Heists by Round 5</li>
+      <li><em>Optional:</em> In games with 6+ players, Ringleader must be hanged</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>Snake Oil Curses</h2>
+    <h2>Snake Oil Curses (Item Cards)</h2>
     <ul>
-      <li><strong>Grizzly Growl:</strong> Forces players to flee the location</li>
-      <li><strong>Rattlesnake Reflex:</strong> Instantly shoot back if attacked</li>
-      <li><strong>Cactus Cramp:</strong> Prevent another player from Buying</li>
-      <li><strong>Howling Moon Fever:</strong> Player must speak with a lisp for the rest of the game</li>
+      <li><strong>Grizzly Growl:</strong> You must growl like a bear before speaking. Forget? Gain 1 Suspicion.</li>
+      <li><strong>Rattlesnake Reflex:</strong> Flinch or mime drawing a pistol every time someone says your name. Fail? Gain 1 Suspicion.</li>
+      <li><strong>Cactus Cramp:</strong> Stops a player from playing “Buy” next round.</li>
+      <li><strong>Thuthpithuthly Happy Fever:</strong> Speak with an exaggerated lisp for the rest of the game. Drop the act? Anyone can assign you Suspicion.</li>
     </ul>
+  </div>
+
+  <div class="section">
+    <h2>Contents</h2>
+    <ul>
+      <li>Role Cards</li>
+      <li>Location Cards</li>
+      <li>Action Cards (6 per player)</li>
+      <li>Item Deck (Pistol, Ammo, Snake Oil, Armor, etc.)</li>
+      <li>Suspicion & Damage Tokens</li>
+      <li>Heist Token Board</li>
+      <li>Round Tracker (1–5)</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Player Count</h2>
+    <p>5–8 players (balanced for 5 in prototype)</p>
   </div>
 
   <div class="back-button">
     <button onclick="window.location.href='index.html'">⬅ Back to Home</button>
   </div>
-
 </body>
 </html>

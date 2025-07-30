@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -52,6 +51,16 @@
       border-radius: 5px;
     }
 
+    /* Discord button styling */
+    .discord-button img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+      cursor: pointer;
+    }
+
     .grid-container {
       display: flex;
       justify-content: center;
@@ -88,6 +97,29 @@
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
+
+    .right-imgs img {
+      flex: 1;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Countdown styling */
+    #countdown {
+      font-family: 'Stardos Stencil', serif;
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin: 25px auto 35px; /* spacing above and below */
+      padding: 12px 20px;
+      display: inline-block;
+      background-color: #f0e0c0; /* parchment look */
+      border: 2px solid #5a3e2b; /* dark brown border */
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    }
+
 
     /* Mobile-friendly improvements */
     @media (max-width: 768px) {
@@ -141,6 +173,19 @@
     }
   </style>
 </head>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/688a37fd171f1719311e24b1/1j1duldme';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 <body>
 <!-- Logo -->
 <img alt="Badges &amp; Bandits Logo" class="logo" src="images/logo.png"/>
@@ -149,12 +194,19 @@
 <p>A Wild West social deduction card game where no one can be trusted — especially your friends.</p>
 <!-- Buttons -->
 <div class="buttons">
-<button onclick="window.location.href='https://www.kickstarter.com/projects/grievousgames/945106022'">Notify Me on Launch</button>
-<button onclick="window.location.href='#'">Learn More</button>
-<button onclick="window.location.href='howtoplay.html'">How to Play</button>
-<!-- Countdown Timer -->
-<div id="countdown" style="font-family: sans-serif; font-size: 1rem; margin-top: 15px;"></div>
+  <button onclick="window.location.href='https://www.kickstarter.com/projects/grievousgames/945106022'">Notify Me on Launch</button>
+  <button onclick="window.location.href='#'">Learn More</button>
+  <button onclick="window.location.href='howtoplay.html'">How to Play</button>
 </div>
+
+<!-- Discord Wooden Button -->
+<a href="https://discord.gg/SXzMc3XvjX" target="_blank" class="discord-button">
+  <img src="images/JoinDiscord.png" alt="Join the Posse on Discord">
+</a>
+
+<!-- Countdown Timer -->
+<div id="countdown"></div>
+
 <script>
   // Set your launch date here (YYYY-MM-DDTHH:MM:SS)
   const launchDate = new Date("2025-10-10T17:00:00").getTime();
@@ -178,15 +230,16 @@
       `⏳ Launches in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
   }, 1000);
 </script>
+
 <!-- Image Grid -->
 <div class="grid-container">
-<div class="left-img">
-<img alt="Box Art" src="images/Box2.png"/>
-</div>
-<div class="right-imgs">
-<img alt="Game Cards - Locations" src="images/fannedlocation.png"/>
-<img alt="Game Cards - Actions" src="images/fannedaction.png"/>
-</div>
+  <div class="left-img">
+    <img alt="Box Art" src="images/Box2.png"/>
+  </div>
+  <div class="right-imgs">
+    <img alt="Game Cards - Locations" src="images/fannedlocation.png"/>
+    <img alt="Game Cards - Actions" src="images/fannedaction.png"/>
+  </div>
 </div>
 </body>
 </html>
