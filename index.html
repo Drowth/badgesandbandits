@@ -71,6 +71,7 @@
       border-radius: 8px;
       box-shadow: 0 3px 6px rgba(0,0,0,0.3);
     }
+
     /* Image grid */
     .grid-container {
       display: flex;
@@ -110,18 +111,13 @@
     }
 
     /* Social buttons (Discord + Kickstarter) */
-.social-buttons img {
-  width: 25vw;   /* 25% of viewport width */
-  max-width: 350px; /* keeps it from being too huge */
-  min-width: 180px; /* optional: stops them shrinking too tiny */
-  height: auto;
-  transition: transform 0.2s;
-}
-
-.social-buttons img:hover {
-  transform: scale(1.05);
-}
-
+    .social-buttons img {
+      width: 25vw;   /* 25% of viewport width */
+      max-width: 350px; /* keeps it from being too huge */
+      min-width: 180px; /* optional: stops them shrinking too tiny */
+      height: auto;
+      transition: transform 0.2s;
+    }
 
     .social-buttons img:hover {
       transform: scale(1.05);
@@ -179,19 +175,6 @@
     }
   </style>
 </head>
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/688a37fd171f1719311e24b1/1j1duldme';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
 <body>
 
   <!-- Logo -->
@@ -230,6 +213,7 @@ s0.parentNode.insertBefore(s1,s0);
       <img src="images/fannedaction.png" alt="Game Cards - Actions" />
     </div>
   </div>
+
   <!-- Countdown -->
   <div id="countdown">⏳ Loading countdown…</div>
 
@@ -255,5 +239,20 @@ s0.parentNode.insertBefore(s1,s0);
         `⏳ Launches in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
   </script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/688a37fd171f1719311e24b1/1j1duldme';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+
 </body>
 </html>
