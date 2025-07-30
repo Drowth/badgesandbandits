@@ -9,14 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-	body {
-		margin: 0;
-		font-family: 'Roboto Slab', serif;
-		background: url("images/parchment-bg_upscaled.jpg") center/cover no-repeat;
-		background-attachment: fixed; /* optional parallax effect */
-		color: #2c1b10;
-	}
-
+    body {
+      margin: 0;
+      font-family: 'Roboto Slab', serif;
+      background: url("images/parchment-bg_upscaled.jpg") center/cover no-repeat;
+      background-attachment: fixed; /* optional parallax effect */
+      color: #2c1b10;
+    }
 
     /* Hero Section */
     .hero {
@@ -109,12 +108,21 @@
       padding: 0 20px;
     }
 
+    /* Fade-in images */
     .grid-container img {
       width: 100%;
       max-width: 500px;
       border: 6px solid #4B2E14;
       border-radius: 8px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+      opacity: 0; /* hidden by default */
+      transform: translateY(30px); /* slight slide-up */
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .grid-container img.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* Footer */
@@ -198,6 +206,24 @@
       document.getElementById("countdown").innerHTML =
         `⏳ Launches in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
+  </script>
+
+  <!-- Fade-in Script -->
+  <script>
+    const images = document.querySelectorAll('.grid-container img');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    }, { threshold: 0.2 });
+
+    images.forEach(img => {
+      observer.observe(img);
+    });
   </script>
 
   <!-- Tawk.to Script -->
