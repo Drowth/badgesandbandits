@@ -89,6 +89,30 @@
       list-style: square;
     }
 
+    /* Special Callout Boxes */
+    .duel-box {
+      margin: 30px auto;
+      padding: 20px;
+      background: #fef7e1;
+      border: 12px solid transparent;
+      border-image: url("images/rope-border.png") 40 round; /* Rope frame */
+      border-radius: 12px;
+      font-family: 'Roboto Slab', serif;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      max-width: 700px;
+    }
+
+    .duel-box strong {
+      display: block;
+      font-family: 'Stardos Stencil', serif;
+      color: #a1261d;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
     /* Footer */
     footer {
       background: url("images/wood-texture-slim.jpg") center/cover no-repeat;
@@ -122,9 +146,6 @@
     <h1>The Law of the Land</h1>
     <p><em>Badges & Bandits</em> is a Wild West social deduction card game full of bluffing, bullets, and betrayal. Here’s how it’s played:</p>
 
-    <h2>The Twist</h2>
-    <p>At the start of the game, the <strong>Bandit Ringleader</strong> secretly chooses their gang. Nobody else knows who’s been recruited, setting the stage for suspicion and lies right from the first turn.</p>
-
     <h2>1. Setup</h2>
     <ul>
       <li>Each player receives a secret <strong>Role Card</strong> (Law or Bandit).</li>
@@ -133,6 +154,13 @@
       <li>Place all <strong>Location Cards</strong> in the center of the table.</li>
       <li>Shuffle the <strong>Action Deck</strong> and deal each player 3 cards.</li>
     </ul>
+
+    <!-- The Twist Box -->
+    <div class="duel-box">
+      <strong>The Twist</strong>
+      At the start of the game, the <strong>Ringleader</strong> secretly chooses who rides with them as Bandits.<br><br>
+      No one else knows for sure who’s in the gang — until the bullets fly.
+    </div>
 
     <h2>2. Game Rounds</h2>
     <p>The game is played in rounds, each with three steps:</p>
@@ -151,13 +179,20 @@
       <li><strong>Stakeout:</strong> Peek at hidden cards and share (or lie about) what you saw.</li>
     </ul>
 
-    <h2>4. Duel Showdown</h2>
-    <p>When accusations fly and tempers flare, two players may face off in a quick‑draw duel:</p>
-    <ul>
-      <li>Both duelists take a card from the Action Deck.</li>
-      <li>On the count of three, they flip them face-up.</li>
-      <li>The higher card wins the duel, the loser gains Suspicion.</li>
-    </ul>
+    <!-- Duel Showdown Box -->
+    <div class="duel-box">
+      <strong>Duel Showdown</strong>
+      When accusations boil over, pistols are drawn.<br><br>
+      A bystander lays down a secret combo of Action Cards in the center.<br>
+      The duelists lock eyes, finger‑guns raised.<br><br>
+
+      A countdown begins: 5...4...3...2...1... <strong>FIRE!</strong><br><br>
+
+      Both players scramble to rebuild the combo from their decks while holding their aim.<br>
+      The first to slam down the right set and call their shot wins.<br><br>
+
+      The loser pays the price — either dropping dead on the dusty street or losing their last bit of armor.
+    </div>
 
     <h2>5. Gallows Event</h2>
     <p>After every three rounds, the town votes on the most suspicious player. 
