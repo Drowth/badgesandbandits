@@ -36,27 +36,36 @@
       margin-top: 10px;
     }
 
+    /* Updated button styles (match index.html saloon signs) */
     nav a {
       display: inline-block;
-      margin: 0 8px;
-      padding: 10px 20px;
-      background-color: #e9d8b0; /* parchment feel */
-      border: 3px solid #4b2e14; /* dark wood border */
-      border-radius: 8px;
-      color: #2a1a0a;
+      margin: 0 12px;
+      padding: 12px 26px;
+      background: #2c1a0e; /* deep saloon brown */
+      border: 3px solid #a67952; /* warm wood trim */
+      border-radius: 6px;
+      color: #f8e4c2;
       font-family: 'Stardos Stencil', serif;
       font-size: 1rem;
       font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
       text-decoration: none;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-      transition: all 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6), inset 0 1px 2px rgba(255,255,255,0.1);
+      transition: all 0.25s ease;
     }
 
     nav a:hover {
-      background-color: #f5e9c8; /* lighter parchment on hover */
-      border-color: #a0522d; /* warm highlight */
-      transform: translateY(-2px);
-      box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+      background: #3b2414;
+      border-color: #d4a373; /* golden glow */
+      color: #ffe9b5;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.7), 0 0 8px rgba(212,163,115,0.6);
+    }
+
+    nav a:active {
+      transform: translateY(1px);
+      box-shadow: inset 0 3px 6px rgba(0,0,0,0.6);
     }
 
     /* Content */
