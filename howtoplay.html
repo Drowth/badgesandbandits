@@ -37,19 +37,26 @@
     }
 
     nav a {
-      font-family: 'Stardos Stencil', serif;
-      text-decoration: none;
-      color: #f8e4c2;
-      background: url("images/wood-button.png") center/cover no-repeat;
-      padding: 10px 20px;
-      margin: 5px;
-      border: 2px solid #3b2414;
       display: inline-block;
-      transition: transform 0.2s ease;
+      margin: 0 8px;
+      padding: 10px 20px;
+      background-color: #e9d8b0; /* parchment feel */
+      border: 3px solid #4b2e14; /* dark wood border */
+      border-radius: 8px;
+      color: #2a1a0a;
+      font-family: 'Stardos Stencil', serif;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+      transition: all 0.2s ease;
     }
 
     nav a:hover {
-      transform: scale(1.05);
+      background-color: #f5e9c8; /* lighter parchment on hover */
+      border-color: #a0522d; /* warm highlight */
+      transform: translateY(-2px);
+      box-shadow: 3px 3px 10px rgba(0,0,0,0.4);
     }
 
     /* Content */
@@ -111,6 +118,7 @@
       color: #a1261d;
       font-size: 1.4rem;
       margin-bottom: 10px;
+      text-transform: uppercase;
     }
 
     /* Footer */
