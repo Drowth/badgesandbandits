@@ -3,220 +3,181 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>How to Play – Badges & Bandits</title>
+  <title>Law of the Land – Badges & Bandits</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: 'Stardos Stencil', serif;
       margin: 0;
-      background-color: #c9b695;
-      color: #1a1a1a;
-      text-align: center;
-    }
-
-    .logo {
-      width: 300px;
-      margin: 30px auto 10px;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      margin: 0;
-      padding: 10px 0 5px;
-    }
-
-    p {
-      font-family: sans-serif;
-      font-size: 0.95rem;
-      margin: 10px auto;
-      max-width: 900px;
-      padding: 0 20px;
-    }
-
-    .section {
-      margin: 30px auto;
-      max-width: 950px;
-      text-align: left;
-      padding: 0 20px;
-    }
-
-    .section h2 {
-      color: #2c2c2c;
-      font-size: 1.4rem;
-      border-bottom: 2px solid #2c2c2c;
-      padding-bottom: 4px;
-    }
-
-    ul, ol {
-      text-align: left;
-      font-family: sans-serif;
-      font-size: 0.95rem;
+      font-family: 'Roboto Slab', serif;
+      background: url("images/parchment-bg_upscaled.jpg") center/cover no-repeat;
+      background-attachment: fixed;
+      color: #2c1b10;
       line-height: 1.6;
-      padding-left: 1.2em;
-      max-width: 900px;
-      margin: 10px auto;
     }
 
-    .back-button {
-      margin-top: 30px;
+    /* Header */
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+      border-bottom: 6px solid #4B2E14;
+      background: url("images/wood-texture-slim.jpg") center/cover no-repeat;
     }
 
-    .back-button button {
-      background-color: #2c2c2c;
-      color: white;
-      border: none;
+    header img.logo {
+      width: 200px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      font-family: 'Stardos Stencil', serif;
+      text-decoration: none;
+      color: #f8e4c2;
+      background: url("images/wood-button.png") center/cover no-repeat;
       padding: 10px 20px;
-      font-family: sans-serif;
-      font-size: 0.9rem;
-      border-radius: 5px;
-      cursor: pointer;
+      margin: 5px;
+      border: 2px solid #3b2414;
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    nav a:hover {
+      transform: scale(1.05);
+    }
+
+    /* Content */
+    .content {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: rgba(244, 225, 179, 0.85);
+      border: 5px solid #4B2E14;
+      border-radius: 8px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    }
+
+    .content h1, .content h2, .content h3 {
+      font-family: 'Stardos Stencil', serif;
+      text-align: center;
+      margin-top: 30px;
+      color: #2c1b10;
+    }
+
+    .content h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .content h2 {
+      font-size: 1.6rem;
+      margin-bottom: 5px;
+    }
+
+    .content p {
+      margin: 15px 0;
+    }
+
+    .content ul {
+      margin: 15px 20px;
+      list-style: square;
+    }
+
+    /* Footer */
+    footer {
+      background: url("images/wood-texture-slim.jpg") center/cover no-repeat;
+      color: #f8e4c2;
+      text-align: center;
+      padding: 20px;
+      font-family: 'Stardos Stencil', serif;
+      border-top: 6px solid #2c1b10;
+      margin-top: 50px;
     }
 
     @media (max-width: 768px) {
-      .logo {
-        width: 180px;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
+      .content { margin: 20px; padding: 15px; }
+      .content h1 { font-size: 1.6rem; }
+      .content h2 { font-size: 1.3rem; }
     }
   </style>
 </head>
 <body>
-  <img src="images/logo.png" alt="Badges & Bandits Logo" class="logo" />
-  <h1>How to Play</h1>
-  <p>Welcome to <strong>Badges & Bandits</strong> — a gritty, social deduction card game about bluffing, bullets, and betrayal.</p>
-  <div class="back-button">
-    <button onclick="window.location.href='index.html'">⬅ Back to Home</button>
-  </div>
 
-  <div class="section">
-    <h2>Why I Made This Game</h2>
-    <p>I’ve always loved games like Coup, Bang!, and Secret Hitler — ones full of second guessing, accusations, and betrayal. I wanted to create something with that same energy, but set in the Wild West. A place where you don’t know who to trust, and every smile might hide a pistol.</p>
-    <p>This game is my first attempt at designing something from the ground up — and with the help of my playgroup, it’s already sparked showdowns, chaos, and plenty of “you what?!” moments. If you enjoy out-bluffing your mates, this one’s for you.</p>
-  </div>
+  <header>
+    <img src="images/logo.png" alt="Badges & Bandits Logo" class="logo" />
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="https://www.kickstarter.com/projects/grievousgames/badges-and-bandits" target="_blank">Kickstarter</a>
+      <a href="https://discord.gg/SXzMc3XvjX" target="_blank">Discord</a>
+    </nav>
+  </header>
 
-  <div class="section">
-    <h2>Quick Summary</h2>
+  <div class="content">
+    <h1>The Law of the Land</h1>
+    <p><em>Badges & Bandits</em> is a Wild West social deduction card game full of bluffing, bullets, and betrayal. Here’s how it’s played:</p>
+
+    <h2>The Twist</h2>
+    <p>At the start of the game, the <strong>Bandit Ringleader</strong> secretly chooses their gang. Nobody else knows who’s been recruited, setting the stage for suspicion and lies right from the first turn.</p>
+
+    <h2>1. Setup</h2>
     <ul>
-      <li>You're either a Badge (Sheriff, Deputy, Marshal’s Courier) or a Bandit (or Ringleader)</li>
-      <li>Choose a location, play an action card, resolve chaos</li>
-      <li>After Rounds 3 & 5, players vote to hang someone</li>
-      <li>Bandits win by pulling off 3 Heists or killing the Sheriff</li>
-      <li>Badges win by hanging the Ringleader (after ≥1 Heist) or stopping all Heists</li>
+      <li>Each player receives a secret <strong>Role Card</strong> (Law or Bandit).</li>
+      <li>One Law player is secretly the <strong>Sheriff</strong> — protect them at all costs.</li>
+      <li>The Bandit Ringleader secretly chooses which players ride with them as fellow Bandits.</li>
+      <li>Place all <strong>Location Cards</strong> in the center of the table.</li>
+      <li>Shuffle the <strong>Action Deck</strong> and deal each player 3 cards.</li>
+    </ul>
+
+    <h2>2. Game Rounds</h2>
+    <p>The game is played in rounds, each with three steps:</p>
+    <ul>
+      <li><strong>Choose:</strong> Secretly select and place an Action Card face-down.</li>
+      <li><strong>Reveal:</strong> Everyone flips their cards at the same time.</li>
+      <li><strong>Resolve:</strong> Apply the effects of Actions, Locations, and Items.</li>
+    </ul>
+
+    <h2>3. Actions</h2>
+    <ul>
+      <li><strong>Heist:</strong> Bandits can steal and generate Heist Tokens (Badges may bluff).</li>
+      <li><strong>Buy:</strong> Draw Item Cards from the Merchant.</li>
+      <li><strong>Gather:</strong> Collect resources to aid the town.</li>
+      <li><strong>Rest:</strong> Lose suspicion and recover.</li>
+      <li><strong>Stakeout:</strong> Peek at hidden cards and share (or lie about) what you saw.</li>
+    </ul>
+
+    <h2>4. Duel Showdown</h2>
+    <p>When accusations fly and tempers flare, two players may face off in a quick‑draw duel:</p>
+    <ul>
+      <li>Both duelists take a card from the Action Deck.</li>
+      <li>On the count of three, they flip them face-up.</li>
+      <li>The higher card wins the duel, the loser gains Suspicion.</li>
+    </ul>
+
+    <h2>5. Gallows Event</h2>
+    <p>After every three rounds, the town votes on the most suspicious player. 
+    If they are hanged, their true role is revealed for all to see. 
+    Should the <strong>Bandit Ringleader</strong> be caught, it’s game over for the gang. 
+    But beware — if the <strong>Sheriff</strong> swings, the town’s defenses crumble.</p>
+
+    <h2>6. Winning</h2>
+    <ul>
+      <li><strong>Law-Aligned Win:</strong> If the <strong>Bandit Ringleader</strong> is hanged at the Gallows, 
+      <em>or</em> if the town survives with a positive <strong>Law & Order Tracker</strong> by completing enough <strong>Perils of the Frontier</strong> (quests).</li>
+      <li><strong>Bandits Win:</strong> If the <strong>Sheriff</strong> is hanged by mistake, 
+      if the town’s <strong>Law & Order</strong> collapses from too many failed Perils, 
+      or if the Ringleader survives until the end.</li>
     </ul>
   </div>
 
-  <div class="section">
-    <h2>Setup</h2>
-    <ol>
-      <li>Deal 1 Role Card to each player (face down)</li>
-      <li>Use either Standard Roles or the Ringleader Recruitment phase (see below)</li>
-      <li>Place 5 Location Cards in a central pool</li>
-      <li>Each player receives 6 Action Cards</li>
-      <li>Shuffle and place the Item Deck</li>
-      <li>Set Suspicion, Damage, Round Tracker, and Heist Token Pile on the table</li>
-    </ol>
-  </div>
+  <footer>
+    Grievous Games © 2025 – Badges & Bandits
+  </footer>
 
-  <div class="section">
-    <h2>Role Options</h2>
-    <ul>
-      <li><strong>Ringleader:</strong> Head of the Bandits. Must be hanged to lose.</li>
-      <li><strong>Bandit:</strong> Standard outlaw. Can perform Heists and defend allies.</li>
-      <li><strong>Sheriff:</strong> Law’s leader. Must be protected.</li>
-      <li><strong>Deputy:</strong> Law-aligned, cannot Heist.</li>
-      <li><strong>Marshal's Courier:</strong> Once per game, may change locations after all actions are revealed.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Ringleader Recruitment Phase</h2>
-    <p>Only the Ringleader knows their role at first. All others have law aligned cards.</p>
-    <ol>
-      <li>All players close eyes with their role cards out in front of them</li>
-      <li>The Ringleader opens their eyes and silently replaces 1–2 role cards with Bandit roles</li>
-      <li>Everyone reopens their eyes and checks their (maybe new) role card, obviously everyone should be shocked and exclaim they have been changed, because thats just funny. (probably)</li>
-    </ol>
-    <p><em>“Everyone, close your eyes and hold out your hand. Ringleader, open your eyes… select your allies… now close them. Everyone may open their eyes.”</em></p>
-  </div>
-
-  <div class="section">
-    <h2>Round Structure</h2>
-    <ol>
-      <li><strong>1. Location Draft:</strong> Players pick a location (round-robin)</li>
-      <li><strong>2. Play Actions:</strong> Secretly play one card (Heist, Buy, Shoot, etc.)</li>
-      <li><strong>3. Reveal & Resolve:</strong> Location by location, cards are flipped and effects are resolved</li>
-      <li><strong>4. Apply Effects:</strong> Heists, Suspicion, Damage, Items</li>
-      <li><strong>5. Gallows Phase:</strong> After Rounds 3 & 5 — vote to hang someone</li>
-    </ol>
-  </div>
-
-  <div class="section">
-    <h2>Victory Conditions</h2>
-    <ul>
-      <li><strong>Bandits Win:</strong> 3 Heists succeed or the Sheriff dies</li>
-      <li><strong>Badges Win:</strong> Ringleader is hanged (after ≥1 Heist) or no Heists by Round 5</li>
-      <li><em>Optional:</em> In games with 6+ players, Ringleader must be hanged</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Snake Oil Curses (Item Cards)</h2>
-    <ul>
-      <li><strong>Grizzly Growl:</strong> You must growl like a bear before speaking. Forget? Gain 1 Suspicion.</li>
-      <li><strong>Rattlesnake Reflex:</strong> Flinch or mime drawing a pistol every time someone says your name. Fail? Gain 1 Suspicion.</li>
-      <li><strong>Cactus Cramp:</strong> Stops a player from playing “Buy” next round.</li>
-      <li><strong>Thuthpithuthly Happy Fever:</strong> Speak with an exaggerated lisp for the rest of the game. Drop the act? Anyone can assign you Suspicion.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Duels</h2>
-    <p>Sometimes two players will find themselves in a <strong>1v1 standoff</strong>. When that happens, the table pauses and a <strong>Duel Showdown</strong> begins.</p>
-    <ol>
-      <li><strong>Dealer of Fate:</strong> The first player eliminated from the game <em>or</em> the last player to scratch their nose becomes the Dealer of Fate. They take the two Duel Action Cards and lay them facedown in a random order.</li>
-      <li><strong>Face-Off:</strong> The two dueling players raise their finger pistols and lock eyes. The Dealer counts down loud and clear: “5… 4… 3… 2… 1… DRAW!”</li>
-      <li><strong>Quickdraw:</strong> At “DRAW!”, both duelists must slam their hands down, grab the Duel Cards, and arrange them in the correct order (Attack → Resolution) as fast as possible.</li>
-      <li><strong>Winner:</strong> The first duelist to correctly lay out the order wins the duel. If both complete at the exact same time, the Dealer of Fate chooses the winner.</li>
-    </ol>
-    <p><em>Optional Variant:</em> If your group prefers less theatrics, simply have both duelists flip one card each simultaneously instead of performing the Quickdraw.</p>
-  </div>
-
-  <div class="section">
-    <h2>Action: Stakeout</h2>
-    <p>As an action, a player may choose to play <strong>Stakeout</strong>. This allows the player to secretly peek at <strong>2 face-down Action Cards</strong> in the exact order they are currently arranged.</p>
-    <ul>
-      <li>The player may then return the cards in the same order.</li>
-      <li>They may share their findings with the table — truthfully, deceptively, or not at all.</li>
-      <li>Other players must decide whether to believe them, adding a new layer of bluff and mistrust.</li>
-    </ul>
-    <p><em>Remember:</em> The power of Stakeout lies as much in what you <strong>say</strong> as in what you actually saw.</p>
-  </div>
-
-
-  <div class="section">
-    <h2>Contents</h2>
-    <ul>
-      <li>Role Cards</li>
-      <li>Location Cards</li>
-      <li>Action Cards (6 per player)</li>
-      <li>Item Deck (Pistol, Ammo, Snake Oil, Armor, etc.)</li>
-      <li>Suspicion & Damage Tokens</li>
-      <li>Heist Token Board</li>
-      <li>Round Tracker (1–5)</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Player Count</h2>
-    <p>5–8 players (balanced for 5 in prototype)</p>
-  </div>
-
-  <div class="back-button">
-    <button onclick="window.location.href='index.html'">⬅ Back to Home</button>
-  </div>
 </body>
 </html>
